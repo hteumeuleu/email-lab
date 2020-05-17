@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blend Modes</title>
+	<style>
+		a { color:inherit; }
+		p { Margin:0; }
+		.test { display:inline-block; width:150px; }
+		.circles { Margin:0 auto 10px; width:110px; height:110px; }
+		.circle { width:70px; height:70px; border-radius:50%; }
+		.test01 .circle { mix-blend-mode:normal; }
+		.test02 .circle { mix-blend-mode:multiply; }
+		.test03 .circle { mix-blend-mode:darken; }
+		.test04 .circle { mix-blend-mode:hard-light; }
+	</style>
+</head>
+<body style="Margin:0; padding:0; background:#5bc8ef; font:16px/1.5 sans-serif;">
+	<div style="padding:20px 0; background:#fff; text-align:center;">
+		<div class="test test01">
+			<div class="circles">
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="background:#f6d54c;"></div>
+				</div>
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="Margin-left:40px; background:#e84999;"></div>
+				</div>
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="Margin-top:40px; Margin-left:20px; background:#5bc8ef;"></div>
+				</div>
+			</div>
+			<p>normal</p>
+		</div>
+		<div class="test test02">
+			<div class="circles">
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="background:#f6d54c;"></div>
+				</div>
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="Margin-left:40px; background:#e84999;"></div>
+				</div>
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="Margin-top:40px; Margin-left:20px; background:#5bc8ef;"></div>
+				</div>
+			</div>
+			<p>multiply</p>
+		</div>
+		<div class="test test03">
+			<div class="circles">
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="background:#f6d54c;"></div>
+				</div>
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="Margin-left:40px; background:#e84999;"></div>
+				</div>
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="Margin-top:40px; Margin-left:20px; background:#5bc8ef;"></div>
+				</div>
+			</div>
+			<p>darken</p>
+		</div>
+		<div class="test test04">
+			<div class="circles">
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="background:#f6d54c;"></div>
+				</div>
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="Margin-left:40px; background:#e84999;"></div>
+				</div>
+				<div style="max-width:0; max-height:0;">
+					<div class="circle" style="Margin-top:40px; Margin-left:20px; background:#5bc8ef;"></div>
+				</div>
+			</div>
+			<p>hard-light</p>
+		</div>
+	</div>
+	<div style="background:#5bc8ef;">
+		<div style="max-width:510px; Margin:20px auto 0; padding:20px 15px;">
+			<h1 style="Margin:0 0 1em; color:#000; font:bold 32px Tahoma, sans-serif; text-align:center;">Blend Modes in CSS</h1>
+			<p style="Margin:0 0 1em; color:#26150e; font:16px/1.5 sans-serif;">
+				Using Blend Modes in CSS, you can achieve advanced effects in emails. This is now supported in Gmail with new update. It also works in Apple Mail, Thunderbird, AOL, Orange.
+			</p>
+			<h2 style="Margin:0; font:bold 16px/1.5 sans-serif;">Further reads:</h2>
+			<p style="Margin:0 0 1em; color:#26150e; font:16px/1.5 sans-serif;">
+				- <a href="https://developer.mozilla.org/fr/docs/Web/CSS/mix-blend-mode">mix-blend-mode</a> on MDN<br />
+				- <a href="https://sarasoueidan.com/blog/compositing-and-blending-in-css/">Compositing And Blending In CSS</a> by Sara Soueidan<br />
+				- <a href="http://blogs.adobe.com/webplatform/2014/07/09/fade-transition-effects-using-blend-modes/">Fading effects using blend modes</a> on Adobe Web Platform Team Blog
+			</p>
+
+			<p style="Margin:0 0 1em; color:#26150e; font:16px/1.5 sans-serif; text-align:right;">
+				<b>R&eacute;mi</b><br />
+				<a href="https://www.twitter.com/HTeuMeuLeu" target="_blank" style="color:#26150e; text-decoration:none;">@HTeuMeuLeu</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
