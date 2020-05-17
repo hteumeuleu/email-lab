@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Playdate. An Interactive Animation in HTML Email.</title>
+	<link rel="icon" href="https://www.hteumeuleu.fr/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		.header { background:#fec500; }
+		.main { margin:0 auto; width:100%; max-width:565px; }
+		.frames { max-width:565px; width:100%; margin:0 auto; overflow:hidden; }
+		.frame { max-height:0; }
+		.toggler { float:left; width:6.25%; padding-bottom:86.3716814%; }
+		.image { display:none; width:100%; padding-bottom:86.3716814%; background-repeat:no-repeat; background-position:0 0; background-size:cover; }
+		.image01 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/01.jpg); }
+		.image02 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/02.jpg); }
+		.image03 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/03.jpg); }
+		.image04 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/04.jpg); }
+		.image05 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/05.jpg); }
+		.image06 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/06.jpg); }
+		.image07 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/07.jpg); }
+		.image08 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/08.jpg); }
+		.image09 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/09.jpg); }
+		.image10 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/10.jpg); }
+		.image11 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/11.jpg); }
+		.image12 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/12.jpg); }
+		.image13 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/13.jpg); }
+		.image14 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/14.jpg); }
+		.image15 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/15.jpg); }
+		.image16 { background-image: url(https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/16.jpg); }
+		.header div:hover .fallback { display: none; }
+		.frames div:hover .image { display: block; }
+	</style>
+	<style>
+		@media(hover:none) {
+			.header div:hover .fallback { display: block; }
+		}
+	</style>
+</head>
+<body style="margin:0;">
+	<div class="header">
+		<div class="main">
+			<div class="fallback" style="max-height:0;">
+				<img src="https://www.hteumeuleu.fr/wp-content/uploads/2019/05/playdate/01.jpg" alt="" width="565" style="max-width:100%;" />
+			</div>
+			<div class="frames">
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image01"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image02"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image03"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image04"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image05"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image06"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image07"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image08"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image09"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image10"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image11"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image12"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image13"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image14"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image15"></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="image image16"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="padding:32px 16px; background:#7800ff;">
+		<div style="max-width:565px; margin:0 auto; color:#fff;">
+			<h1 style="margin:0 0 1em; color:#fff; font:bold 24px Roobert, Tahoma, Helvetica, sans-serif; text-align:left;">Interactive Animation in HTML Email.</h1>
+			<p style="margin:0 0 1.5em; color:#fff; font:16px/1.5 sans-serif; text-align:left;">
+				This is Playdate, the lovable portable gaming system made by the people at <a href="https://www.panic.com" style="color:#fff;">Panic</a>. And this is an interactive animation of it in an HTML email.
+			</p>
+			<p style="margin:0 0 1.5em; color:#fff; font:16px/1.5 sans-serif; text-align:left;">
+				Go <a href="https://www.play.date" style="color:#fff;">learn more about Playdate</a> and <a href="https://www.medium.com" style="color:#fff;">discover how this email works</a>.
+			</p>
+			<p style="margin:0 0 1.5em; color:#fff; font:16px/1.5 sans-serif; text-align:right;">
+				<b>R&eacute;mi</b><br />
+				<a href="https://www.twitter.com/HTeuMeuLeu" style="color:#fff; text-decoration:none;">@HTeuMeuLeu</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>touch-action:manipulation</title>
+	<meta name="x-apple-disable-message-reformatting" />
+	<link rel="shortcut icon" href="https://www.supermariorun.com/favicon.ico" />
+	<style>
+		body { counter-reset:coins; margin:0; min-width:100%; min-height:480px; /*background:#fff url(http://i.imgur.com/j2a6MjN.jpg) no-repeat center center / cover;*/ }
+
+		.block { position:relative; left:50%; top:240px; display:none; width:64px; height:64px; /*background:url(http://i.imgur.com/2ANdO56.png) repeat-x 0 0 / auto 100%;*/ animation:block steps(16) 1s infinite; transform:translate(-50%,-50%); cursor:pointer; touch-action:manipulation; -moz-user-select:none; user-select:none; }
+		.block:active { margin-top:-8px; }
+
+		.counter { color:#fff; font:bold 4em sans-serif; text-align:center; -moz-user-select:none; user-select:none; }
+		.counter:before { content:counters(coins, ".") " ";}
+
+		@keyframes block {
+			from { background-position:0 0; }
+			to { background-position:-1024px 0; }
+		}
+
+		.checkbox { opacity:0; }
+		.checkbox:checked { counter-increment:coins; }
+
+		.checkbox1:checked ~ .block2 { display:block; }
+		.checkbox2:checked ~ .block3 { display:block; }
+		.checkbox3:checked ~ .block4 { display:block; }
+		.checkbox4:checked ~ .block5 { display:block; }
+		.checkbox5:checked ~ .block6 { display:block; }
+		.checkbox6:checked ~ .block7 { display:block; }
+		.checkbox7:checked ~ .block8 { display:block; }
+		.checkbox8:checked ~ .block9 { display:block; }
+
+		.checkbox1:checked ~ .block1 { display:none; }
+		.checkbox2:checked ~ .block2 { display:none; }
+		.checkbox3:checked ~ .block3 { display:none; }
+		.checkbox4:checked ~ .block4 { display:none; }
+		.checkbox5:checked ~ .block5 { display:none; }
+		.checkbox6:checked ~ .block6 { display:none; }
+		.checkbox7:checked ~ .block7 { display:none; }
+		.checkbox8:checked ~ .block8 { display:none; }
+		.checkbox9:checked ~ .block9 { display:none; }
+
+		.checkbox9:checked ~ .block1 { display:block; }
+
+		.block1 { display:block; }
+
+		body { counter-reset:test; }
+		.test:after { content:counters(test, ".") " "; font-weight: bold; font-size:32px; letter-spacing:-1px; }
+		/*#cbTest1:checked { counter-increment:test +1; }
+		#cbTest2:checked { counter-increment:test +2; }
+		#cbTest3:checked { counter-increment:test +4; }
+		#cbTest4:checked { counter-increment:test +8; }*/
+		input:checked ~ * { counter-increment:test +1; }
+	</style>
+</head>
+<body>
+	<div class="test">
+		<form id="form2">
+			<input type="checkbox" id="cbTestA1" name="rbTest" checked />
+			<input type="checkbox" id="cbTestA2" name="rbTest" />
+			<button type="reset">Reset</button>
+		</form>
+		<hr />
+		<form id="form1">
+			<input type="checkbox" id="cbTest1" name="rbTest" checked />
+			<input type="checkbox" id="cbTest2" name="rbTest" checked />
+			<input type="checkbox" id="cbTest3" name="rbTest" checked />
+			<input type="checkbox" id="cbTest4" name="rbTest" checked />
+			<input type="checkbox" id="cbTest5" name="rbTest" checked />
+			<div class="test-labels">
+				<label for="cbTest1">Un</label>
+			</div>
+		</form>
+		<label for="cbTest1">
+			Un
+			<label for="cbTest2">
+				Deux
+				 <button type="reset" form="form1">Reset</button>
+			</label>
+		</label>
+	</div>
+	<input type="checkbox" id="cb1" class="checkbox checkbox1" />
+	<input type="checkbox" id="cb2" class="checkbox checkbox2" />
+	<input type="checkbox" id="cb3" class="checkbox checkbox3" />
+	<input type="checkbox" id="cb4" class="checkbox checkbox4" />
+	<input type="checkbox" id="cb5" class="checkbox checkbox5" />
+	<input type="checkbox" id="cb6" class="checkbox checkbox6" />
+	<input type="checkbox" id="cb7" class="checkbox checkbox7" />
+	<input type="checkbox" id="cb8" class="checkbox checkbox8" />
+	<input type="checkbox" id="cb9" class="checkbox checkbox9" />
+	<label class="block block9" for="cb9"></label>
+	<label class="block block8" for="cb8"></label>
+	<label class="block block7" for="cb7"></label>
+	<label class="block block6" for="cb6"></label>
+	<label class="block block5" for="cb5"></label>
+	<label class="block block4" for="cb4"></label>
+	<label class="block block3" for="cb3"></label>
+	<label class="block block2" for="cb2"></label>
+	<label class="block block1" for="cb1"></label>
+	<h1 class="counter">coins</h1>
+</body>
+</html>

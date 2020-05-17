@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Playdate. Interactive Animation in HTML Email.</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="https://play.date/favicon-32x32.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		body {
+			font: 1em sans-serif;
+			background: #fff;
+		}
+
+		a, label {
+			touch-action: manipulation;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+	</style>
+	<style>
+		.sprite01 {
+			background-position: 0 0 !important;
+		}
+
+		.sprite02 {
+			background-position: -565px 0 !important;
+		}
+
+		.sprite03 {
+			background-position: -1130px 0 !important;
+		}
+
+		.sprite04 {
+			background-position: -1695px 0 !important;
+		}
+
+		.sprite05 {
+			background-position: -2260px 0 !important;
+		}
+
+		.sprite06 {
+			background-position: -2825px 0 !important;
+		}
+
+		.sprite07 {
+			background-position: -3390px 0 !important;
+		}
+
+		.sprite08 {
+			background-position: -3955px 0 !important;
+		}
+
+		.sprite09 {
+			background-position: -4520px 0 !important;
+		}
+
+		.sprite10 {
+			background-position: -5085px 0 !important;
+		}
+
+		.sprite11 {
+			background-position: -5650px 0 !important;
+		}
+
+		.sprite12 {
+			background-position: -6215px 0 !important;
+		}
+
+		.sprite13 {
+			background-position: -6780px 0 !important;
+		}
+
+		.sprite14 {
+			background-position: -7345px 0 !important;
+		}
+
+		.sprite15 {
+			background-position: -7910px 0 !important;
+		}
+
+		.sprite16 {
+			background-position: -8475px 0 !important;
+		}
+	</style>
+	<style>
+		.frame { max-height:0; }
+		.frame-inside { display:none; max-height:0; }
+		.sprite { display:block; width:100%; padding-bottom: 86.3716814%; background: #fec500 url(https://hteumeuleu.fr/wp-content/uploads/2019/05/sprite.jpg) no-repeat 0 0; background-size: cover; }
+		.toggler { float:left; width:6.25%; padding-bottom: 86.3716814%; /* 488*100/565 */ }
+		.sandwich { max-width:565px; width:100%; margin:0 auto; overflow:hidden; }
+	</style>
+	<style>
+		.sandwich div:hover .frame-inside {
+			display: block !important;
+		}
+		.hero div:hover .fallback {
+			display: none !important;
+		}
+	</style>
+</head>
+<body style="margin:0;">
+	<div style="position:absolute;left:2rem;top:2rem; padding:1rem 2rem; background:rgba(255,0,0,0.25); font:1em sans-serif;">V5</div>
+	<div style="min-height:488px; background:#fec500;" class="hero">
+		<div style="margin:0 auto; width:100%; max-width:565px;" class="main">
+			<div class="fallback" style="max-height:0;">
+				<img src="https://hteumeuleu.fr/wp-content/uploads/2019/05/playdate.jpg" alt="" width="565" style="max-width:100%;" />
+			</div>
+			<div class="sandwich">
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite01"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite02"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite03"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite04"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite05"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite06"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite07"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite08"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite09"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite10"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite11"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite12"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite13"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite14"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite15"></div></div>
+				</div>
+				<div class="frame">
+					<div class="toggler"></div>
+					<div class="frame-inside"><div class="sprite sprite16"></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div style="max-width:565px; margin:20px auto; padding:20px 15px;">
+			<h1 style="Margin:0 0 1em; color:#000; font:bold 32px Tahoma, sans-serif; text-align:left;">Interactive Animation in HTML Email.</h1>
+			<p>
+				https://codepen.io/vincent-valentin/pen/vGWJKr<br />
+				https://twitter.com/HTeuMeuLeu/status/870531260699086848
+			</p>
+			<p>
+				https://drafts.csswg.org/selectors-4/#the-hover-pseudo
+			</p>
+			<blockquote>
+				For example, [HTML5] defines a labeled control element as matching :hover when its label is hovered.
+			</blockquote>
+			<p>
+				https://css-tricks.com/i-like-how-percentage-background-position-works/
+			</p>
+			<blockquote>
+				So if you set something like <code>background-position: 25% 25%</code>, that positions the image such that 25% of the way across itself aligns with 25% of the way across the element.
+			</blockquote>
+		</div>
+	</div>
+</body>
+</html>

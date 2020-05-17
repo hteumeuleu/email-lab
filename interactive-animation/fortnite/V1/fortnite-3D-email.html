@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr" class="nodebug">
+<head>
+	<meta charset="UTF-8">
+	<title>Fortnite</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		body {
+			font: 1em sans-serif;
+			background: #fff;
+		}
+
+		.checkbox {
+			position: absolute;
+			left: -999px;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			opacity: 0.001;
+			z-index: -1;
+		}
+
+		.main {
+			background: #ececec url(sprite.jpg) no-repeat 0 0;
+		}
+
+			.main img { display: none !important; }
+
+		.labels {
+			font-size: 0;
+			display: table;
+			width: 100%;
+			table-layout:fixed;
+		}
+
+			.labels label {
+				display: table-cell;
+				height: 670px;
+			}
+
+			#checkbox01:hover ~ .main {
+				background-position: 0 0 !important;
+			}
+
+			#checkbox02:hover ~ .main {
+				background-position: -640px 0 !important;
+			}
+
+			#checkbox03:hover ~ .main {
+				background-position: -1280px 0 !important;
+			}
+
+			#checkbox04:hover ~ .main {
+				background-position: -1920px 0 !important;
+			}
+
+			#checkbox05:hover ~ .main {
+				background-position: -2560px 0 !important;
+			}
+
+			#checkbox06:hover ~ .main {
+				background-position: -3200px 0 !important;
+			}
+
+			#checkbox07:hover ~ .main {
+				background-position: -3840px 0 !important;
+			}
+
+			#checkbox08:hover ~ .main {
+				background-position: -4480px 0 !important;
+			}
+
+			#checkbox09:hover ~ .main {
+				background-position: -5120px 0 !important;
+			}
+
+			#checkbox10:hover ~ .main {
+				background-position: -5760px 0 !important;
+			}
+
+			#checkbox11:hover ~ .main {
+				background-position: -6400px 0 !important;
+			}
+
+			#checkbox12:hover ~ .main {
+				background-position: -7040px 0 !important;
+			}
+
+			#checkbox13:hover ~ .main {
+				background-position: -7680px 0 !important;
+			}
+
+			#checkbox14:hover ~ .main {
+				background-position: -8320px 0 !important;
+			}
+
+			#checkbox15:hover ~ .main {
+				background-position: -8960px 0 !important;
+			}
+
+			#checkbox16:hover ~ .main {
+				background-position: -9600px 0 !important;
+			}
+
+			a, label { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+	</style>
+	<style>
+		.debug .labels label:hover {
+			background: rgba(255, 0, 0, 0.1);
+		}
+	</style>
+</head>
+<body>
+	<input type="checkbox" id="checkbox01" class="checkbox" />
+	<input type="checkbox" id="checkbox02" class="checkbox" />
+	<input type="checkbox" id="checkbox03" class="checkbox" />
+	<input type="checkbox" id="checkbox04" class="checkbox" />
+	<input type="checkbox" id="checkbox05" class="checkbox" />
+	<input type="checkbox" id="checkbox06" class="checkbox" />
+	<input type="checkbox" id="checkbox07" class="checkbox" />
+	<input type="checkbox" id="checkbox08" class="checkbox" />
+	<input type="checkbox" id="checkbox09" class="checkbox" />
+	<input type="checkbox" id="checkbox10" class="checkbox" />
+	<input type="checkbox" id="checkbox11" class="checkbox" />
+	<input type="checkbox" id="checkbox12" class="checkbox" />
+	<input type="checkbox" id="checkbox13" class="checkbox" />
+	<input type="checkbox" id="checkbox14" class="checkbox" />
+	<input type="checkbox" id="checkbox15" class="checkbox" />
+	<input type="checkbox" id="checkbox16" class="checkbox" />
+	<div style="margin:0 auto; width:100%; max-width:640px;" class="main">
+		<div class="labels">
+			<label for="checkbox01" class="label01"></label>
+			<label for="checkbox02" class="label02"></label>
+			<label for="checkbox03" class="label03"></label>
+			<label for="checkbox04" class="label04"></label>
+			<label for="checkbox05" class="label05"></label>
+			<label for="checkbox06" class="label06"></label>
+			<label for="checkbox07" class="label07"></label>
+			<label for="checkbox08" class="label08"></label>
+			<label for="checkbox09" class="label09"></label>
+			<label for="checkbox10" class="label10"></label>
+			<label for="checkbox11" class="label11"></label>
+			<label for="checkbox12" class="label12"></label>
+			<label for="checkbox13" class="label13"></label>
+			<label for="checkbox14" class="label14"></label>
+			<label for="checkbox15" class="label15"></label>
+			<label for="checkbox16" class="label16"></label>
+		</div>
+	</div>
+	<p>
+		https://codepen.io/vincent-valentin/pen/vGWJKr<br />
+		https://twitter.com/HTeuMeuLeu/status/870531260699086848
+	</p>
+	<p>
+		https://drafts.csswg.org/selectors-4/#the-hover-pseudo
+	</p>
+	<blockquote>
+		For example, [HTML5] defines a labeled control element as matching :hover when its label is hovered.
+	</blockquote>
+</body>
+</html>

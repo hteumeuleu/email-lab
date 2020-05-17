@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Litmus Community Contest: Creative Use of ALT Text</title>
+	<style>
+		html, body { height:100%; margin:0; font:1em sans-serif; }
+
+		img {
+			display:inline-block;
+			box-sizing:border-box;
+			overflow:hidden;
+			color:#fff;
+			font:bold 16px sans-serif;
+			word-wrap:break-word;
+			border:none;
+			outline:none;
+			text-align:left;
+		}
+
+		* img:before {
+			display:block;
+			line-height:50px;
+			font-size:32px;
+			transition:Margin-top linear 0.25s;
+		}
+
+		* img:after {
+			display:block;
+			font-size:32px;
+			line-height:50px;
+			height:50px;
+			content:'XXXXX';
+		}
+
+		* img:hover:before {
+			Margin-top:-50px;
+		}
+
+		* img:first-child:after {
+			content:'I heard';
+		}
+
+		* img + img:after {
+			content:'alt text was just static.';
+		}
+
+		* img + img + img:after {
+			content:'And then, boom. Bananas. 🍌';
+			color:#f5bb47;
+		}
+
+		* img /deep/ #alttext-container {
+			border:none !important;
+			padding:0 !important;
+		}
+
+		* img /deep/ #alttext-image {
+			display:none !important;
+		}
+
+		* img /deep/ #alttext {
+			display:block;
+			line-height:50px;
+			font-size:32px;
+			transition:margin-top linear 0.25s;
+		}
+
+		* img:hover /deep/ #alttext {
+			Margin-top:-50px;
+		}
+
+		* img /deep/ #alttext:after {
+			display:block;
+			line-height:50px;
+			height:50px;
+		}
+
+		* img:first-child /deep/ #alttext:after {
+			content:'I heard';
+		}
+
+		* img + img /deep/ #alttext:after {
+			content:'alt text was just static.';
+		}
+
+		* img + img + img /deep/ #alttext:after {
+			content:'And then, boom. Bananas. 🍌';
+			color:#f5bb47;
+		}
+	</style>
+</head>
+<body bgcolor="#000000" style="background:#000000">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+		<tr>
+			<td height="100%" style="vertical-align:middle;">
+				<div style="Margin:0 auto; Position:relative; width:600px; height:150px; font-size:0; text-align:center;">
+					<img src="http://hteumeuleu.fr/wp-content/uploads/2015/01/email-alt-cc-01.png" alt="Once upon a time," width="600" height="50" style="display:block;" />
+					<img src="http://hteumeuleu.fr/wp-content/uploads/2015/01/email-alt-cc-02.png" alt="a guy played with alt text." width="600" height="50" style="display:block;" />
+					<img src="http://hteumeuleu.fr/wp-content/uploads/2015/01/email-alt-cc-03.png" alt="The end." width="600" height="50" style="display:block;" />
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

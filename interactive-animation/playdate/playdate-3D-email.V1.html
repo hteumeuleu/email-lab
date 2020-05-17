@@ -1,0 +1,184 @@
+<html lang="en" class="debug">
+<head>
+	<meta charset="UTF-8" />
+	<title>Playdate. Interactive Animation in HTML Email.</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="https://play.date/favicon-32x32.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		body {
+			font: 1em sans-serif;
+			background: #fff;
+		}
+
+		a, label {
+			touch-action: manipulation;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+
+		input.checkbox {
+			position: absolute;
+			left: -999px;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			opacity: 0.001;
+			z-index: -1;
+		}
+
+		.main {
+			background: #fec500 url(https://hteumeuleu.fr/wp-content/uploads/2019/05/sprite.jpg) no-repeat 0 0;
+			background-size: cover;
+		}
+
+			.hero:hover .fallback {
+				display: none !important;
+			}
+
+		.labels {
+			font-size: 0;
+			display: table;
+			width: 100%;
+			table-layout:fixed;
+		}
+
+			.label {
+				display: table-cell;
+				/*height: 488px;*/
+				padding-bottom: 86.3716814%; /* 488*100/565 */
+			}
+
+			#checkbox01:hover ~ .main {
+				background-position: 0 0 !important;
+			}
+
+			#checkbox02:hover ~ .main {
+				background-position: -565px 0 !important;
+			}
+
+			#checkbox03:hover ~ .main {
+				background-position: -1130px 0 !important;
+			}
+
+			#checkbox04:hover ~ .main {
+				background-position: -1695px 0 !important;
+			}
+
+			#checkbox05:hover ~ .main {
+				background-position: -2260px 0 !important;
+			}
+
+			#checkbox06:hover ~ .main {
+				background-position: -2825px 0 !important;
+			}
+
+			#checkbox07:hover ~ .main {
+				background-position: -3390px 0 !important;
+			}
+
+			#checkbox08:hover ~ .main {
+				background-position: -3955px 0 !important;
+			}
+
+			#checkbox09:hover ~ .main {
+				background-position: -4520px 0 !important;
+			}
+
+			#checkbox10:hover ~ .main {
+				background-position: -5085px 0 !important;
+			}
+
+			#checkbox11:hover ~ .main {
+				background-position: -5650px 0 !important;
+			}
+
+			#checkbox12:hover ~ .main {
+				background-position: -6215px 0 !important;
+			}
+
+			#checkbox13:hover ~ .main {
+				background-position: -6780px 0 !important;
+			}
+
+			#checkbox14:hover ~ .main {
+				background-position: -7345px 0 !important;
+			}
+
+			#checkbox15:hover ~ .main {
+				background-position: -7910px 0 !important;
+			}
+
+			#checkbox16:hover ~ .main {
+				background-position: -8475px 0 !important;
+			}
+	</style>
+	<style>
+		.debug .labels label:hover {
+			background: rgba(255, 0, 0, 0.1);
+		}
+	</style>
+</head>
+<body style="margin:0;">
+	<div style="padding:0 10px; background:#fec500;" class="hero">
+		<input type="checkbox" id="checkbox01" class="checkbox" />
+		<input type="checkbox" id="checkbox02" class="checkbox" />
+		<input type="checkbox" id="checkbox03" class="checkbox" />
+		<input type="checkbox" id="checkbox04" class="checkbox" />
+		<input type="checkbox" id="checkbox05" class="checkbox" />
+		<input type="checkbox" id="checkbox06" class="checkbox" />
+		<input type="checkbox" id="checkbox07" class="checkbox" />
+		<input type="checkbox" id="checkbox08" class="checkbox" />
+		<input type="checkbox" id="checkbox09" class="checkbox" />
+		<input type="checkbox" id="checkbox10" class="checkbox" />
+		<input type="checkbox" id="checkbox11" class="checkbox" />
+		<input type="checkbox" id="checkbox12" class="checkbox" />
+		<input type="checkbox" id="checkbox13" class="checkbox" />
+		<input type="checkbox" id="checkbox14" class="checkbox" />
+		<input type="checkbox" id="checkbox15" class="checkbox" />
+		<input type="checkbox" id="checkbox16" class="checkbox" />
+		<div style="margin:0 auto; max-width:565px;" class="main">
+			<div class="fallback" style="max-height:0; overflow:visible !important;">
+				<img src="https://hteumeuleu.fr/wp-content/uploads/2019/05/playdate.jpg" alt="" width="565" style="max-width:100%;" />
+			</div>
+			<div class="labels">
+				<label for="checkbox01" class="label"></label>
+				<label for="checkbox02" class="label"></label>
+				<label for="checkbox03" class="label"></label>
+				<label for="checkbox04" class="label"></label>
+				<label for="checkbox05" class="label"></label>
+				<label for="checkbox06" class="label"></label>
+				<label for="checkbox07" class="label"></label>
+				<label for="checkbox08" class="label"></label>
+				<label for="checkbox09" class="label"></label>
+				<label for="checkbox10" class="label"></label>
+				<label for="checkbox11" class="label"></label>
+				<label for="checkbox12" class="label"></label>
+				<label for="checkbox13" class="label"></label>
+				<label for="checkbox14" class="label"></label>
+				<label for="checkbox15" class="label"></label>
+				<label for="checkbox16" class="label"></label>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div style="max-width:565px; margin:20px auto; padding:20px 15px;">
+			<h1 style="Margin:0 0 1em; color:#000; font:bold 32px Tahoma, sans-serif; text-align:left;">Interactive Animation in HTML Email.</h1>
+			<p>
+				https://codepen.io/vincent-valentin/pen/vGWJKr<br />
+				https://twitter.com/HTeuMeuLeu/status/870531260699086848
+			</p>
+			<p>
+				https://drafts.csswg.org/selectors-4/#the-hover-pseudo
+			</p>
+			<blockquote>
+				For example, [HTML5] defines a labeled control element as matching :hover when its label is hovered.
+			</blockquote>
+			<p>
+				https://css-tricks.com/i-like-how-percentage-background-position-works/
+			</p>
+			<blockquote>
+				So if you set something like <code>background-position: 25% 25%</code>, that positions the image such that 25% of the way across itself aligns with 25% of the way across the element.
+			</blockquote>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+body {
+	margin: 0;
+	font: 1em sans-serif;
+	color: #fff;
+	background: #000;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+.button {
+	cursor: pointer;
+	padding: 0.5em 1em;
+	color: #000;
+	font-weight: bold;
+	font-size: 1.5em;
+	background: #fff;
+	border-radius: 0.25em;
+	border: 0.25em solid #000;
+}
+
+.screen {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 320px;
+	height: 568px;
+	background: #000;
+}
+
+/*
+ * Map
+ */
+.map {
+	width: 6025px;
+	height: 100%;
+	background: url(images/map.jpg) repeat-x 0 0 / auto 100%;
+	animation: map linear 45s;
+	animation-fill-mode: both;
+	animation-play-state: paused;
+}
+
+/*.map-floor {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	background: url(images/floor.jpg) repeat-x 0 0 / auto 100%;
+}*/
+
+[class^="map-block"] {
+	position: absolute;
+	left: 376px;
+	bottom: 238px;
+	width: 32px;
+	height: 32px;
+	background: green;
+}
+
+.map-block-002 {
+	left: 128px;
+	bottom: 238px;
+}
+
+.coin {
+	width: 20px;
+	height: 20px;
+	background: url(images/coin.png) repeat-x 0 0 / auto 100%;
+	animation: coin 1s steps(16) infinite;
+}
+
+.mario {
+	position: absolute;
+	bottom: 190px;
+	left: 80px;
+	animation: marioY linear 45s;
+	animation-play-state: paused;
+}
+
+	.mario .sprite {
+		width: 32px;
+		height: 48px;
+		background: url(images/mario.png) repeat-x 0 0 / auto 100%;
+		animation: run 1s steps(25) infinite;
+		animation-play-state: paused;
+	}
+
+/*
+ * Controls
+ */
+.ctrl001 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	touch-action: manipulation;
+}
+
+.ctrl002 {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.75);
+	cursor: pointer;
+	touch-action: manipulation;
+}
+
+/*
+ * Animations
+ */
+@keyframes map {
+	from { transform:translateX(0); }
+	to { transform:translateX(calc(-100% + 320px)); }
+}
+
+/* 1s = 4.5% */
+@keyframes marioY {
+	0%, 5.5666% { bottom: 190px; }
+	5.5667%, 20% { bottom:210px; }
+	100% { bottom: 640px; }
+}
+
+@keyframes run {
+	from { background-position:0 0; }
+	to { background-position:-960px 0; }
+}
+
+@keyframes coin {
+	from { background-position:0 0; }
+	to { background-position:-326px 0; }
+}
+
+@keyframes jump {
+	from { transform:translateY(0); }
+	50% { transform:translateY(-48px); }
+	to { transform:translateY(0); }
+}
+
+@keyframes hide {
+	from { opacity:0; display:none; }
+	99% { opacity:0; display:none; }
+	to { opacity:1; display:block; }
+}
+
+/*
+ * Actions
+ */
+#cb-start:checked ~ * .map,
+#cb-start:checked ~ * .mario,
+#cb-start:checked ~ * .mario .sprite {
+	animation-play-state: running;
+}
+#cb-start:checked ~ * .ctrl001 {
+	display: none;
+}
+#cb-jump:checked ~ * .mario {
+	animation: jump 1s ease-in-out;
+	animation-fill-mode: forwards;
+}
+#cb-jump:checked ~ * .ctrl002 {
+	animation: hide 1s linear;
+}

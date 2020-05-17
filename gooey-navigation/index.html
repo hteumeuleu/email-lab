@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Litmus Community Contest:Navigation</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style>
+		html, body { min-width:320px; width:100%; height:100%; Margin:0; padding:0; color:#fff; font:1em sans-serif; background:#333333; }
+
+		.h8u-menu {
+			width:320px;
+			height:200px;
+			Margin:0 auto;
+			Position:relative;
+			-webkit-Filter:url("#goo");
+			Filter:url("#goo");
+		}
+
+		.h8u-menu-wrapper {
+			Margin:0 auto;
+			width:80px;
+			padding-top:120px;
+		}
+
+		.h8u-button, .h8u-nav-item {
+			display:block !important;
+			background:#333;
+			border-radius:50%;
+			color:#fff;
+			border:none;
+			outline:none;
+			Position:relative;
+			Z-index:1;
+			cursor:pointer;
+			font-weight:bold;
+			text-align:center;
+			transition:-webkit-transform 0.5s cubic-bezier(0.5, 1.5, 0.5, 1.25), background-color 0.25s linear;
+			transition:transform 0.5s cubic-bezier(0.5, 1.5, 0.5, 1.25), background-color 0.25s linear;
+		}
+
+			.h8u-button {
+				width:80px !important;
+				height:80px !important;
+				line-height:80px;
+				font-size:40px !important;
+				-webkit-transform:rotate(-45deg);
+				transform:rotate(-45deg);
+				-webkit-tap-highlight-color:rgba(0,0,0,0);
+				-webkit-tap-highlight-color:transparent;
+				-moz-user-select:none;
+				-webkit-user-select:none;
+				user-select:none;
+			}
+
+			.h8u-nav-item {
+				Margin:-60px auto 0;
+				width:60px !important;
+				height:60px !important;
+				font-weight:bold;
+				line-height:60px;
+				font-size:20px;
+				Z-index:0;
+				-webkit-transform:translate(0, 0) rotate(-90deg);
+				transform:translate(0, 0) rotate(-90deg);
+				-webkit-transform:translate3d(0, 0, 0) rotate(-90deg);
+				transform:translate3d(0, 0, 0) rotate(-90deg);
+			}
+
+			.h8u-nav-item--1 {
+				Margin-top:-70px;
+				-webkit-transform:translate(0, 0) rotate(90deg);
+				transform:translate(0, 0) rotate(90deg);
+				-webkit-transform:translate3d(0, 0, 0) rotate(90deg);
+				transform:translate3d(0, 0, 0) rotate(90deg);
+			}
+
+			.h8u-nav-item--1:hover {
+				background-color:#ada248;
+			}
+
+			.h8u-nav-item--2:hover {
+				background-color:#d95843;
+			}
+
+			.h8u-nav-item--3:hover {
+				background-color:#f4a938;
+			}
+
+		.moz-text-html .h8u-button,
+		.moz-text-html .h8u-nav-item,
+		.ExternalClass .h8u-button,
+		.ExternalClass .h8u-nav-item,
+		noinput.h8u-checkbox .h8u-button,
+		noinput.h8u-checkbox .h8u-nav-item {
+			transition-delay:0.5s, 0s;
+		}
+
+		.h8u-checkbox:checked + * .h8u-button,
+		.moz-text-html .h8u-menu-wrapper:hover .h8u-button,
+		noinput.h8u-checkbox .h8u-menu-wrapper:hover .h8u-button,
+		.ExternalClass .h8u-menu-wrapper:hover .h8u-button {
+			Position:relative;
+			-webkit-transform:translate(0, 0) rotate(0) scale(0.8);
+			transform:translate(0, 0) rotate(0) scale(0.8);
+			-webkit-transform:translate3d(0, 0, 0) rotate(0) scale(0.8);
+			transform:translate3d(0, 0, 0) rotate(0) scale(0.8);
+			transition-duration:0.5s;
+			transition-delay:0s;
+		}
+
+		.h8u-checkbox:checked + * .h8u-nav-item--1,
+		.moz-text-html .h8u-menu-wrapper:hover .h8u-nav-item--1,
+		noinput.h8u-checkbox .h8u-menu-wrapper:hover .h8u-nav-item--1,
+		.ExternalClass .h8u-menu-wrapper:hover .h8u-nav-item--1 {
+			-webkit-transform:translate(-150%, -50%);
+			transform:translate(-150%, -50%);
+			-webkit-transform:translate3d(-90px, -30px, 0);
+			transform:translate3d(-90px, -30px, 0);
+			transition-delay:0s;
+		}
+
+		.h8u-checkbox:checked + * .h8u-nav-item--2,
+		.moz-text-html .h8u-menu-wrapper:hover .h8u-nav-item--2,
+		noinput.h8u-checkbox .h8u-menu-wrapper:hover .h8u-nav-item--2,
+		.ExternalClass .h8u-menu-wrapper:hover .h8u-nav-item--2 {
+			-webkit-transform:translate(0, -150%);
+			transform:translate(0, -150%);
+			-webkit-transform:translate3d(0px, -90px, 0);
+			transform:translate3d(0px, -90px, 0);
+			transition-delay:0.125s, 0s;
+		}
+
+		.h8u-checkbox:checked + * .h8u-nav-item--3,
+		.moz-text-html .h8u-menu-wrapper:hover .h8u-nav-item--3,
+		noinput.h8u-checkbox .h8u-menu-wrapper:hover .h8u-nav-item--3,
+		.ExternalClass .h8u-menu-wrapper:hover .h8u-nav-item--3 {
+			-webkit-transform:translate(150%, -50%);
+			transform:translate(150%, -50%);
+			-webkit-transform:translate3d(90px, -30px, 0);
+			transform:translate3d(90px, -30px, 0);
+			transition-delay:0.25s, 0s;
+		}
+
+		noinput.h8u-checkbox { display:block !important; }
+
+		.h8u-menu img { background:transparent !important; }
+
+		* input[type="checkbox"] { display:none !important; }
+
+		@media yahoo {
+			.h8u-menu { height:auto; }
+			.h8u-menu-wrapper { width:auto; padding-top:0; text-align:center; }
+			.h8u-button { display:none; }
+			.h8u-nav-item { display:inline-block; }
+		}
+
+		.h8u-nav-item--1 {
+			-webkit-transform:translate3d(-60px, -15px, 0);
+			transform:translate3d(-60px, -15px, 0);
+		}
+
+		.h8u-nav-item--2 {
+			-webkit-transform:translate3d(0, -60px, 0);
+			transform:translate3d(0, -60px, 0);
+		}
+
+		.h8u-nav-item--3 {
+			-webkit-transform:translate3d(60px, -15px, 0);
+			transform:translate3d(60px, -15px, 0);
+		}
+	</style>
+	<style type="text/css">
+		@media only screen and (max-width:480px) {
+			@-ms-viewport { width:320px; }
+			@viewport { width:320px; }
+		}
+	</style>
+</head>
+<body bgcolor="#333333" style="background:#333333; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; 
+text-size-adjust:none;">
+	<div style="background:#fff; padding-bottom:26px;">
+		<div class="h8u-menu" style="Position:relative;">
+			<input type="checkbox" class="h8u-checkbox" id="h8u-checkbox" style="display:none; mso-hide:all;" />
+			<div class="h8u-menu-wrapper" style="text-align:center;">
+				<label class="h8u-button" for="h8u-checkbox" style="display:none; mso-hide:all; font-size:0;">&times;</label>
+				<a href="http://www.litmus.com/builder" target="_blank" class="h8u-nav-item h8u-nav-item--1"><img src="http://emails.hteumeuleu.fr/wp-content/uploads/2015/03/icon1.png" alt="Builder" width="60" height="60" border="0" style="background:#333;" /></a>
+				<a href="http://www.litmus.com/tests" target="_blank" class="h8u-nav-item h8u-nav-item--2"><img src="http://emails.hteumeuleu.fr/wp-content/uploads/2015/03/icon2.png" alt="Previews" width="60" height="60" border="0" style="background:#333;" /></a>
+				<a href="http://www.litmus.com/analytics" target="_blank" class="h8u-nav-item h8u-nav-item--3"><img src="http://emails.hteumeuleu.fr/wp-content/uploads/2015/03/icon3.png" alt="Analytics" width="60" height="60" border="0" style="background:#333;" /></a>
+			</div>
+		</div>
+	</div>
+	<chapichapo style="display:none" />
+	<div style="background:#333;">
+		<div style="max-width:450px; Margin:0 auto; padding:32px 15px 0;">
+			<h1 style="Margin:0 0 1em; color:#fff; font:bold 32px Tahoma, sans-serif; text-align:center;">Gooey navigation</h1>
+			<p style="Margin:0 0 1em; color:#fff; font:16px/1.5 sans-serif;">
+				The Gooey Effect is an original effect using SVG filters created for the Web by <a href="https://www.twitter.com/lucasbebber" target="_blank" style="color:#fff;">Lucas Bebber</a>. He wrote <a href="https://css-tricks.com/gooey-effect/" target="_blank" style="color:#fff;">an excellent article on CSS-Tricks</a> and made <a href="http://tympanus.net/codrops/2015/03/10/creative-gooey-effects/" target="_blank" style="color:#fff;">wonderful demos on Codrops</a>. I loved <a href="http://tympanus.net/Development/CreativeGooeyEffects/menu.html" target="_blank" style="color:#fff;">this effect</a> so much that I wanted to see how it would work in an e-mail.
+			</p>
+			<p style="Margin:0 0 1em; color:#fff; font:16px/1.5 sans-serif; text-align:right;">
+				R&eacute;mi<br />
+				<a href="https://www.twitter.com/HTeuMeuLeu" target="_blank" style="color:#fff; text-decoration:none;">@HTeuMeuLeu</a>
+			</p>
+		</div>
+	</div>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1" height="1">
+		<defs>
+			<filter id="goo">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
+				<feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+			</filter>
+		</defs>
+	</svg>
+</body>
+</html>

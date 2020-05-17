@@ -1,0 +1,1 @@
+montage -tile 16x1 -geometry 1130x976 *.jpg background.jpg

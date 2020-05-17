@@ -1,0 +1,323 @@
+<html lang="en" class="debug">
+<head>
+	<meta charset="UTF-8" />
+	<title>Playdate. Interactive Animation in HTML Email.</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="https://play.date/favicon-32x32.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		body {
+			font: 1em sans-serif;
+			background: #fff;
+		}
+
+		a, label {
+			touch-action: manipulation;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+
+		.sprite {
+			display: none;
+			width: 565px;
+			height: 488px;
+			background: #fec500 url(https://hteumeuleu.fr/wp-content/uploads/2019/05/sprite.jpg) no-repeat 0 0;
+			background-size: cover;
+		}
+
+		.labels {
+			font-size: 0;
+			width: 100%;
+			padding-bottom: 86.3716814%; /* 488*100/565 */
+		}
+
+			.label {
+				display: inline-block;
+				max-height: 0;
+			}
+
+			.label-inside {
+				display: block;
+				height: 488px;
+			}
+
+
+			.label01 .sprite {
+				background-position: 0 0 !important;
+			}
+
+			.label02 .sprite {
+				background-position: -565px 0 !important;
+			}
+
+			.label03 .sprite {
+				background-position: -1130px 0 !important;
+			}
+
+			.label04 .sprite {
+				background-position: -1695px 0 !important;
+			}
+
+			.label05 .sprite {
+				background-position: -2260px 0 !important;
+			}
+
+			.label06 .sprite {
+				background-position: -2825px 0 !important;
+			}
+
+			.label07 .sprite {
+				background-position: -3390px 0 !important;
+			}
+
+			.label08 .sprite {
+				background-position: -3955px 0 !important;
+			}
+
+			.label09 .sprite {
+				background-position: -4520px 0 !important;
+			}
+
+			.label10 .sprite {
+				background-position: -5085px 0 !important;
+			}
+
+			.label11 .sprite {
+				background-position: -5650px 0 !important;
+			}
+
+			.label12 .sprite {
+				background-position: -6215px 0 !important;
+			}
+
+			.label13 .sprite {
+				background-position: -6780px 0 !important;
+			}
+
+			.label14 .sprite {
+				background-position: -7345px 0 !important;
+			}
+
+			.label15 .sprite {
+				background-position: -7910px 0 !important;
+			}
+
+			.label16 .sprite {
+				background-position: -8475px 0 !important;
+			}
+	</style>
+	<style>
+		div[class="x_hero"]:hover .fallback {
+			display: none !important;
+		}
+	</style>
+	<style>
+		.label div:hover .sprite {
+			display: block;
+		}
+	</style>
+	<style>
+		.debug .labels label:hover {
+			background: rgba(255, 0, 0, 0.1);
+		}
+	</style>
+	<style>
+		.pouets:hover .pouet { position:relative; z-index: 2; }
+		.pouets .pouet:hover { position:relative; z-index: 1; }
+		.pouet > div { outline: 2px dotted #fff; outline-offset:-8px; }
+		.pouet > div:hover  { background-color: rgba(255,0,0,0.5) !important; }
+		.pouet > div:hover div  { display: block !important; outline:2px solid white; outline-offset:-2px; }
+	</style>
+</head>
+<body style="margin:0;">
+	<div style="position:absolute;left:2rem;top:2rem; padding:1rem 2rem; background:rgba(255,0,0,0.25); font:1em sans-serif;">V2</div>
+	<div style="padding: 0 10px; text-align:center; min-height: 320px; background:rebeccapurple;">
+		<div style="display:inline-block;">
+			<div style="margin: 0 auto;width:320px; height:320px; background: rgba(255,255,255,0.125);" class="pouets">
+				<div style="width:0; max-height:0;" class="pouet">
+					<div style="margin: 0 auto;width:320px; height:320px;">
+						<div style="display:none; width:320px; height:320px;"></div>
+					</div>
+				</div>
+				<div style="width:0; max-height:0;" class="pouet">
+					<div style="margin: 0 auto 0 80px;width:240px; height:320px;">
+						<div style="margin-left:-80px;display:none; width:320px; height:320px;"></div>
+					</div>
+				</div>
+				<div style="width:0; max-height:0;" class="pouet">
+					<div style="margin: 0 auto 0 160px;width:160px; height:320px;">
+						<div style="margin-left:-240px;display:none; width:320px; height:320px;"></div>
+					</div>
+				</div>
+				<div style="width:0; max-height:0;" class="pouet">
+					<div style="margin: 0 auto 0 240px;width:80px; height:320px;">
+						<div style="margin-left:-240px;display:none; width:320px; height:320px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="display:inline-block;">
+			<div style="margin: 0 auto;width:320px; height:320px; background: rgba(255,255,255,0.125);">
+				<div style="width:0; max-height:0;" class="pouet">
+					<div style="margin: 0 auto;width:320px; height:320px; background: rgba(255,255,255,0.125);">
+						<div style="display:none; width:320px; height:320px; background:rgba(0,255,255,0.5);"></div>
+					</div>
+				</div>
+				<div style="width:0; max-height:0;" class="pouet">
+					<div style="margin: 0 auto;width:240px; height:320px; background: rgba(255,255,255,0.125);">
+						<div style="display:none; width:320px; height:320px; background:rgba(0,255,255,0.5);"></div>
+					</div>
+				</div>
+				<div style="width:0; max-height:0;" class="pouet">
+					<div style="margin: 0 auto;width:160px; height:320px; background: rgba(255,255,255,0.125);">
+						<div style="display:none; width:320px; height:320px; background:rgba(0,255,255,0.5);"></div>
+					</div>
+				</div>
+				<div style="width:0; max-height:0;" class="pouet">
+					<div style="margin: 0 auto;width:80px; height:320px; background: rgba(255,255,255,0.125);">
+						<div style="display:none; width:320px; height:320px; background:rgba(0,255,255,0.5);"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="padding:0 10px; background:#fec500;" class="hero">
+		<div style="margin:0 auto; max-width:565px;" class="main">
+			<div class="labels">
+				<div style="width:0; max-height:0;" class="label label16">
+					<div style="margin: 0 auto;width:565px; height:488px; background: rgba(255,255,255,0.125);">
+						<div style="width:0; max-height:0;">
+							<div class="sprite"></div>
+						</div>
+					</div>
+				</div>
+				<div style="width:0; max-height:0;" class="label label14">
+					<div style="margin: 0 auto;width:423.75px; height:488px; background: rgba(255,255,255,0.125);">
+						<div style="width:0; max-height:0;">
+							<div class="sprite"></div>
+						</div>
+					</div>
+				</div>
+				<div style="width:0; max-height:0;" class="label label12">
+					<div style="margin: 0 auto;width:282.5px; height:488px; background: rgba(255,255,255,0.125);">
+						<div style="width:0; max-height:0;">
+							<div class="sprite"></div>
+						</div>
+					</div>
+				</div>
+				<div style="width:0; max-height:0;" class="label label10">
+					<div style="margin: 0 auto;width:141.25px; height:488px; background: rgba(255,255,255,0.125);">
+						<div style="width:0; max-height:0;">
+							<div class="sprite"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="fallback" style="max-height:0;">
+				<img src="https://hteumeuleu.fr/wp-content/uploads/2019/05/playdate.jpg" alt="" width="565" style="max-width:100%;" />
+			</div> -->
+			<div class="labels">
+				<label class="label label01">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label class="label label02">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label class="label label03">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox04" class="label label04">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox05" class="label label05">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox06" class="label label06">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox07" class="label label07">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox08" class="label label08">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox09" class="label label09">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox10" class="label label10">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox11" class="label label11">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox12" class="label label12">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox13" class="label label13">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox14" class="label label14">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox15" class="label label15">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+				<label for="checkbox16" class="label label16">
+					<div class="label-inside">
+						<div class="sprite"></div>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div style="max-width:565px; margin:20px auto; padding:20px 15px;">
+			<h1 style="Margin:0 0 1em; color:#000; font:bold 32px Tahoma, sans-serif; text-align:left;">Interactive Animation in HTML Email.</h1>
+			<p>
+				https://codepen.io/vincent-valentin/pen/vGWJKr<br />
+				https://twitter.com/HTeuMeuLeu/status/870531260699086848
+			</p>
+			<p>
+				https://drafts.csswg.org/selectors-4/#the-hover-pseudo
+			</p>
+			<blockquote>
+				For example, [HTML5] defines a labeled control element as matching :hover when its label is hovered.
+			</blockquote>
+			<p>
+				https://css-tricks.com/i-like-how-percentage-background-position-works/
+			</p>
+			<blockquote>
+				So if you set something like <code>background-position: 25% 25%</code>, that positions the image such that 25% of the way across itself aligns with 25% of the way across the element.
+			</blockquote>
+		</div>
+	</div>
+</body>
+</html>
