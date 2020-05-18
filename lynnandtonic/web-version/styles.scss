@@ -1,0 +1,188 @@
+$image-slice-width: 107px;
+$image-slice-height: 428px;
+
+.wrapper {
+	z-index: 1;
+	width: 100%;
+	min-width: ($image-slice-width * 4);
+	max-width: calc(100% - #{(110px * 2)});
+	margin: 0 auto;
+}
+
+.face {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-shrink: 1;
+	flex-grow: 1;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.face img {
+	margin: auto;
+	width: 100%;
+	max-width: $image-slice-width;
+ 	height: $image-slice-height;
+	flex-shrink: 1;
+	flex-grow: 1;
+	object-fit: cover;
+
+	&:first-child {
+		object-position: right top;
+	}
+
+	&:last-child {
+		object-position: left top;
+	}
+}
+
+.face--blue {
+	overflow: visible;
+	margin: 0 auto;
+	max-width: ($image-slice-width * 10 * 2 + 1750px);
+
+	& > img {
+		max-width: ($image-slice-width * 2);
+	}
+}
+
+// Cyborg and helmet transparency
+.face--helmet {
+	--helmet-position-x: min(50%, 90px);
+	--helmet-margin-x: max(-50%, -90px);
+
+	& > img:first-child {
+		position: relative;
+		left: var(--helmet-position-x);
+		margin-left: var(--helmet-margin-x);
+	}
+
+	& > img:last-child {
+		position: relative;
+		right: var(--helmet-position-x);
+		margin-right: var(--helmet-margin-x);
+	}
+}
+
+.face--cyborg {
+	width: 100%;
+	overflow: visible;
+
+	& > img {
+		max-width: ($image-slice-width * 2);
+	}
+}
+
+// Mechanics
+.face--mechanics {
+	& > img:first-child {
+		object-position: calc(100% + 89px) top;
+	}
+
+	& > img:last-child {
+		object-position: -89px top;
+	}
+
+	& > img {
+		max-width: 275px;
+	}
+
+	.puppet {
+		flex-grow: 1;
+		flex-shrink: 1;
+		min-width: 180px;
+		max-width: calc(100% - #{2 * $image-slice-width});
+ 		height: $image-slice-height;
+
+ 		& > img {
+ 			display: block;
+ 			max-width: 1750px;
+ 			object-position: center top;
+ 		}
+
+ 		&::after {
+ 			content: '';
+ 			position: absolute;
+ 			left: calc(50% - 7px);
+ 			top: 30%;
+ 			width: 22px;
+ 			height: 14px;
+ 			background-image: url(images/mouth.svg);
+ 			background-repeat: no-repeat;
+ 			background-size: 44px 14px;
+
+ 			@media only screen and (min-width: 2950px) {
+ 				background-position: right top;
+ 			}
+ 		}
+	}
+}
+
+// Shadows
+.shadow {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 50%;
+	max-width: $image-slice-width;
+	mask-size: auto $image-slice-height;
+	mask-position: right top;
+	mask-repeat: no-repeat;
+}
+
+.shadow--left {
+	left: 0;
+	right: calc(100% - $image-slice-width);
+	background: linear-gradient(to right, rgba(0,0,0,.3), rgba(0,0,0,0) 14%);
+}
+
+.shadow--right {
+	left: calc(100% - $image-slice-width);
+	right: 0;
+	background: linear-gradient(to left, rgba(0,0,0,.3), rgba(0,0,0,0) 14%);
+	mask-position: left top;
+}
+
+$portraits: 'skull', 'pizza', 'pops', 'mustache', 'picasso', 'helmet', 'cyborg';
+
+@each $portrait in $portraits {
+	.face--#{$portrait} .shadow--left {
+		mask-image: url(images/left-#{$portrait}.svg);
+	}
+
+	.face--#{$portrait} .shadow--right {
+		mask-image: url(images/right-#{$portrait}.svg);
+	}
+}
+
+// Neck
+.neck {
+	position: absolute;
+	width: 720px;
+	top: calc(50% + 160px);
+	left: calc(50% - 360px);
+
+	img {
+		width: 100%;
+		vertical-align: middle;
+	}
+}
+
+// Reset and page layout
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	padding: 1rem 0;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: #26cbff;
+	overflow: hidden;
+}

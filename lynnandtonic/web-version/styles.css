@@ -1,0 +1,261 @@
+.wrapper {
+  z-index: 1;
+  width: 100%;
+  min-width: 428px;
+  max-width: calc(100% - 220px);
+  margin: 0 auto;
+}
+
+.face {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.face img {
+  margin: auto;
+  width: 100%;
+  max-width: 107px;
+  height: 428px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.face img:first-child {
+  -o-object-position: right top;
+     object-position: right top;
+}
+.face img:last-child {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
+.face--blue {
+  overflow: visible;
+  margin: 0 auto;
+  max-width: 3890px;
+}
+.face--blue > img {
+  max-width: 214px;
+}
+
+.face--helmet {
+  --helmet-position-x: min(50%, 90px);
+  --helmet-margin-x: max(-50%, -90px);
+}
+.face--helmet > img:first-child {
+  position: relative;
+  left: var(--helmet-position-x);
+  margin-left: var(--helmet-margin-x);
+}
+.face--helmet > img:last-child {
+  position: relative;
+  right: var(--helmet-position-x);
+  margin-right: var(--helmet-margin-x);
+}
+
+.face--cyborg {
+  width: 100%;
+  overflow: visible;
+}
+.face--cyborg > img {
+  max-width: 214px;
+}
+
+.face--mechanics > img:first-child {
+  -o-object-position: calc(100% + 89px) top;
+     object-position: calc(100% + 89px) top;
+}
+.face--mechanics > img:last-child {
+  -o-object-position: -89px top;
+     object-position: -89px top;
+}
+.face--mechanics > img {
+  max-width: 275px;
+}
+.face--mechanics .puppet {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  min-width: 180px;
+  max-width: calc(100% - 214px);
+  height: 428px;
+}
+.face--mechanics .puppet > img {
+  display: block;
+  max-width: 1750px;
+  -o-object-position: center top;
+     object-position: center top;
+}
+.face--mechanics .puppet::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 7px);
+  top: 30%;
+  width: 22px;
+  height: 14px;
+  background-image: url(images/mouth.svg);
+  background-repeat: no-repeat;
+  background-size: 44px 14px;
+}
+@media only screen and (min-width: 2950px) {
+  .face--mechanics .puppet::after {
+    background-position: right top;
+  }
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  max-width: 107px;
+  -webkit-mask-size: auto 428px;
+          mask-size: auto 428px;
+  -webkit-mask-position: right top;
+          mask-position: right top;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.shadow--left {
+  left: 0;
+  right: calc(100% - $image-slice-width);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.3)), color-stop(14%, rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 14%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 14%);
+}
+
+.shadow--right {
+  left: calc(100% - $image-slice-width);
+  right: 0;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.3)), color-stop(14%, rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 14%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 14%);
+  -webkit-mask-position: left top;
+          mask-position: left top;
+}
+
+.face--skull .shadow--left {
+  -webkit-mask-image: url(images/left-skull.svg);
+          mask-image: url(images/left-skull.svg);
+}
+
+.face--skull .shadow--right {
+  -webkit-mask-image: url(images/right-skull.svg);
+          mask-image: url(images/right-skull.svg);
+}
+
+.face--pizza .shadow--left {
+  -webkit-mask-image: url(images/left-pizza.svg);
+          mask-image: url(images/left-pizza.svg);
+}
+
+.face--pizza .shadow--right {
+  -webkit-mask-image: url(images/right-pizza.svg);
+          mask-image: url(images/right-pizza.svg);
+}
+
+.face--pops .shadow--left {
+  -webkit-mask-image: url(images/left-pops.svg);
+          mask-image: url(images/left-pops.svg);
+}
+
+.face--pops .shadow--right {
+  -webkit-mask-image: url(images/right-pops.svg);
+          mask-image: url(images/right-pops.svg);
+}
+
+.face--mustache .shadow--left {
+  -webkit-mask-image: url(images/left-mustache.svg);
+          mask-image: url(images/left-mustache.svg);
+}
+
+.face--mustache .shadow--right {
+  -webkit-mask-image: url(images/right-mustache.svg);
+          mask-image: url(images/right-mustache.svg);
+}
+
+.face--picasso .shadow--left {
+  -webkit-mask-image: url(images/left-picasso.svg);
+          mask-image: url(images/left-picasso.svg);
+}
+
+.face--picasso .shadow--right {
+  -webkit-mask-image: url(images/right-picasso.svg);
+          mask-image: url(images/right-picasso.svg);
+}
+
+.face--helmet .shadow--left {
+  -webkit-mask-image: url(images/left-helmet.svg);
+          mask-image: url(images/left-helmet.svg);
+}
+
+.face--helmet .shadow--right {
+  -webkit-mask-image: url(images/right-helmet.svg);
+          mask-image: url(images/right-helmet.svg);
+}
+
+.face--cyborg .shadow--left {
+  -webkit-mask-image: url(images/left-cyborg.svg);
+          mask-image: url(images/left-cyborg.svg);
+}
+
+.face--cyborg .shadow--right {
+  -webkit-mask-image: url(images/right-cyborg.svg);
+          mask-image: url(images/right-cyborg.svg);
+}
+
+.neck {
+  position: absolute;
+  width: 720px;
+  top: calc(50% + 160px);
+  left: calc(50% - 360px);
+}
+.neck img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background: #26cbff;
+  overflow: hidden;
+}
