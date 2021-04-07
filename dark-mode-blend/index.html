@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Gmail, Dark Mode and CSS Blend Modes</title>
+	<style>
+		div { flex-grow:1; }
+		u + .body .gmail-blend-screen { background:#000; mix-blend-mode:screen; }
+		u + .body .gmail-blend-difference { background:#000; mix-blend-mode:difference; }
+	</style>
+</head>
+<body class="body" style="margin:0; padding:0; background:#000; font:10px/1.5 sans-serif;">
+	<div style="background:#fff; text-align:left;">
+		<div style="display:flex;">
+			<div style="background:#ff0;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#0ff;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#3f0;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#f0f;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#f00;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#00f;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+		</div>
+		<div style="display:flex;">
+			<div style="background:#ff0; background-image:linear-gradient(#ff0,#ff0);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#0ff; background-image:linear-gradient(#0ff,#0ff);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#3f0; background-image:linear-gradient(#3f0,#3f0);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#f0f; background-image:linear-gradient(#f0f,#f0f);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#f00; background-image:linear-gradient(#f00,#f00);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#00f; background-image:linear-gradient(#00f,#00f);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="display:flex;">
+			<div style="background:#000;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#444;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#777;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#aaa;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#ddd;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+			<div style="background:#fff;">
+				<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+		</div>
+		<div style="display:flex;">
+			<div style="background:#000; background-image:linear-gradient(#000,#000);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#444; background-image:linear-gradient(#444,#444);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#777; background-image:linear-gradient(#777,#777);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#aaa; background-image:linear-gradient(#aaa,#aaa);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#ddd; background-image:linear-gradient(#ddd,#ddd);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+			<div style="background:#fff; background-image:linear-gradient(#fff,#fff);">
+				<div class="gmail-blend-screen">
+					<div class="gmail-blend-difference">
+						<div style="padding:1em; color:#fff; font:10px/1.5 sans-serif;">Lorem ipsum dolor sit amet consectetur.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="background:#000;">
+		<div style="max-width:510px; margin:20px auto 0; padding:20px 15px;">
+			<h1 style="margin:0 0 1em; color:#fff; font:bold 32px Tahoma, sans-serif; text-align:center;">Fixing Gmail’s dark mode issues with CSS Blend Modes</h1>
+			<p style="margin:0 0 1em; color:#fff; font:16px/1.5 sans-serif;">
+				Using Blend Modes in CSS, we can blend different layers in Gmail to keep a white text color.
+			</p>
+			<h2 style="margin:0; color:#fff; font:bold 16px/1.5 sans-serif;">Further reads:</h2>
+			<p style="margin:0 0 1em; color:#fff; font:16px/1.5 sans-serif;">
+				- <a href="https://developer.mozilla.org/fr/docs/Web/CSS/mix-blend-mode" style="color:#fff;">mix-blend-mode</a> on MDN<br />
+				- <a href="https://www.hteumeuleu.com/2021/fixing-gmail-dark-mode-css-blend-modes/" style="color:#fff;">Fixing Gmail’s dark mode issues with CSS Blend Modes</a><br />
+			</p>
+			<p style="margin:0 0 1em; color:#fff; font:16px/1.5 sans-serif; text-align:right;">
+				<b>R&eacute;mi</b><br />
+				<a href="https://www.twitter.com/HTeuMeuLeu" target="_blank" style="color:#fff; text-decoration:none;">@HTeuMeuLeu</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
