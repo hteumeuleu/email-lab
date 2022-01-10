@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Remaking @lynnandtonic's responsive illustration in an HTML email</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/*.table {
+			display: block !important;
+			width: 100%;
+			margin: 0 auto;
+			font-size: 0;
+			text-align: center;
+		}
+
+		.cell {
+			display: inline-block !important;
+		}
+
+		.cell-left,
+		.cell-right {
+			width: 50% !important;
+			max-width: 107px;
+			height: 428px;
+		}
+
+		.cell {
+			width: calc(100% - 214px);
+		}
+
+		.cell-blue.cell-left,
+		.cell-blue.cell-right {
+			max-width: 214px;
+		}
+
+		.cell-blue {
+			width: calc(100% - 428px);
+		}*/
+		/*.table {
+			table-layout: fixed;
+			width: auto !important;
+		}
+		.cell {
+			overflow: hidden;
+		}
+		.cell-left,
+		.cell-right {*/
+			/*width:107px !important;
+			width: clamp(0px, 50%, 107px) !important;
+			width: max(50%, 107px);
+		}*/
+		.table {
+			/*width: 100%;*/
+			/*table-layout: fixed;*/
+		}
+		td,
+		.cell {
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body style="margin:0; padding:0; background:#26cbff;">
+	<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="table-layout:fixed; margin:0 auto; width:642px; empty-cells:show; max-width:100%;">
+		<tr>
+			<td style="width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-picasso.png') no-repeat right top;"></td>
+			<td height="428">
+				<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="table-layout:fixed; width:100%; empty-cells:show;">
+					<tr>
+						<td style="width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-mustache.png') no-repeat right top;"></td>
+						<td height="428">
+							<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:214px; max-width:100%; empty-cells:show;">
+								<tr>
+									<td style="width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-pops.png') no-repeat right top;"></td>
+									<td height="428">
+									</td>
+									<td style="width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-pops.png') no-repeat left top;"></td>
+								</tr>
+							</table>
+						</td>
+						<td style="width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-mustache.png') no-repeat left top;"></td>
+					</tr>
+				</table>
+			</td>
+			<td style="width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-picasso.png') no-repeat left top;"></td>
+		</tr>
+	</table>
+	<div style="padding:1rem 0; background:#26cbff;">
+		<div class="table" style="display:table; table-layout:fixed; max-width:100%; table-layout:fixed; empty-cells:show; width:1960px; max-width:100%; margin:auto;">
+			<div class="cell cell-left cell-blue" style="display:table-cell; width:214px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-blue.png') no-repeat right top;">
+			</div><!--
+			--><div class="cell cell-blue" style="display:table-cell;">
+				<div class="table" style="display:table; table-layout:fixed; max-width:100%; empty-cells:show;">
+					<div class="cell cell-left" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-skull.png') no-repeat right top;">
+					</div><!--
+					--><div class="cell" style="display:table-cell;">
+						<div class="table" style="display:table; table-layout:fixed; max-width:100%; empty-cells:show;">
+							<div class="cell cell-left" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-pizza.png') no-repeat right top;">
+							</div><!--
+							--><div class="cell" style="display:table-cell;">
+								<div class="table" style="display:table; table-layout:fixed; max-width:100%; empty-cells:show;">
+									<div class="cell cell-left" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-pops.png') no-repeat right top;">
+									</div><!--
+									--><div class="cell" style="display:table-cell;">
+										<div class="table" style="display:table; table-layout:fixed; max-width:100%; empty-cells:show;">
+											<div class="cell cell-left" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-mustache.png') no-repeat right top;">
+											</div><!--
+											--><div class="cell" style="display:table-cell;">
+												<div class="table" style="display:table; table-layout:fixed; max-width:100%; empty-cells:show;">
+													<div class="cell cell-left" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-picasso.png') no-repeat right top;">
+													</div><!--
+													--><div class="cell" style="display:table-cell;">
+														<div class="table" style="display:table; table-layout:fixed; max-width:100%; empty-cells:show;">
+															<div class="cell cell-left" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-cyborg.png') no-repeat right top;">
+																<div style="height:428px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-helmet.png') no-repeat right top;"></div>
+															</div><!--
+															--><div class="cell" style="display:table-cell;">
+																<div style="background: url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/lynn-pattern.png') repeat-x center top;">
+																	<div style="background: url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/lynn-armstrong.png') no-repeat center top;">
+																		<div class="table" style="display:table; table-layout:fixed; max-width:100%; empty-cells:show;">
+																			<div class="cell cell-left" style="display:table-cell; width:364px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/left-mechanics.png') no-repeat right top;">
+																				<div style="height:428px;"></div>
+																			</div>
+																			<div class="cell" style="background: url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/lynn-pattern.png') repeat-x center top;">
+																				<div style="background: url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/lynn-armstrong.png') no-repeat center top;">
+																					<div style="height:428px;"></div>
+																				</div>
+																			</div>
+																			<div class="cell cell-right" style="display:table-cell; width:364px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-mechanics.png') no-repeat left top;">
+																				<div style="height:428px;"></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div><!--
+															--><div class="cell cell-right" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-cyborg.png') no-repeat left top;">
+																<div style="height:428px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-helmet.png') no-repeat left top;"></div>
+															</div>
+														</div>
+													</div><!--
+													--><div class="cell cell-right" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-picasso.png') no-repeat left top;">
+													</div>
+												</div>
+											</div><!--
+											--><div class="cell cell-right" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-mustache.png') no-repeat left top;">
+											</div>
+										</div>
+									</div><!--
+									--><div class="cell cell-right" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-pops.png') no-repeat left top;">
+									</div>
+								</div>
+							</div><!--
+							--><div class="cell cell-right" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-pizza.png') no-repeat left top;">
+							</div>
+						</div>
+					</div><!--
+					--><div class="cell cell-right" style="display:table-cell; width:107px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-skull.png') no-repeat left top;">
+					</div>
+				</div>
+			</div><!--
+			--><div class="cell cell-right cell-blue" style="display:table-cell; width:214px; background:url('https://www.hteumeuleu.fr/wp-content/uploads/2020/05/lynnandtonic/png/right-blue.png') no-repeat left top;">
+			</div>
+		</div>
+	</div>
+	<div style="max-width:30rem; margin:0 auto; padding:2em 1em;">
+		<h1 style="margin:1em 0; color:#fff; font:bold 1.5em/1.5 Tahoma, sans-serif; text-align:left;">Remaking @lynnandtonic's responsive illustration in an HTML email</h1>
+		<p style="margin:0 0 1em; color:#fff; font:1em/1.5 sans-serif;">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis maxime vitae placeat, excepturi, provident repellat, veniam ipsum ut eveniet non eius modi? Omnis, debitis eligendi molestiae hic reiciendis, sed officiis!
+		</p>
+		<p style="margin:0 0 1em; color:#fff; font:1em/1.5 sans-serif; text-align:right;">
+			R&eacute;mi<br />
+			<a href="https://www.twitter.com/HTeuMeuLeu" target="_blank" style="color:#fff; text-decoration:none;">@HTeuMeuLeu</a>
+		</p>
+	</div>
+</body>
+</html>
